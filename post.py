@@ -14,7 +14,7 @@ def set_value(form, tag, value):
         form.click()
     else:
         print("error")
-    time.sleep(3)
+    time.sleep(1)
 
 driver = webdriver.Chrome()
 
@@ -69,7 +69,15 @@ button = gds_shadow.find_element_by_css_selector(selector['root']['postButton'])
 button.click()
 
 print("post successful!")
-time.sleep(20)
+time.sleep(5)
 driver.execute_script("window.scrollTo(0, 1000);")
+time.sleep(5)
 post_card = gds_shadow.find_element_by_css_selector(selector['root']['postCard'])
-print("screenshot: " + post_card.screenshot_as_base64)
+screenshot = post_card.screenshot_as_base64
+
+print("write image to artifact...")
+file_base64 = './screenshot.base64'
+with open(file_base64, mode='w') as f:
+    f.write(screenshot)
+
+print("all steps was done!")

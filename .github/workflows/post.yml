@@ -4,7 +4,7 @@ on:
   push:
   workflow_dispatch:
   schedule:
-    - cron:  '0 * * * *'
+    - cron:  '*/30 * * * *'
 
 jobs:
   build:
@@ -28,6 +28,12 @@ jobs:
     - name: Start XVFB
       run: Xvfb :1000 &
     - name: Run scraping
-      run: pipenv run post_profile
+      run: | 
+        pipenv run post_profile
+        cat ./screenshot.base64 | base64 -d > profile.jpg
       env:
         DISPLAY: :1000
+    - name: Archive Screenshots
+      uses: actions/upload-artifact@v2
+      with:
+        path: profile.jpg
