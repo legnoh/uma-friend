@@ -1,0 +1,68 @@
+---
+profile:
+  supportId: スーパークリーク(SSRサポート)
+  limitNumber: 4凸
+  trainerId: 363668256
+  comment: |
+    レオ杯育成用ウンス置いときます。マルゼンあたりの育成にどうぞ。
+
+delegate:
+  umaMusumeId: セイウンスカイ
+  statusId: スタミナ
+  statusLevel: ☆3
+  distanceId: 芝
+  distanceLevel: ☆2
+  uniqueFactor: アングリング×スキーミング
+  uniqueFactorLevel: ☆1
+  commonFactors:
+  - name: 集中力
+    level: ☆3
+  - name: 急ぎ足
+    level: ☆2
+  - name: 逃げ直線◯
+    level: ☆2
+  - name: 逃げのコツ◯
+    level: ☆2
+  - name: ラッキーセブン
+    level: ☆1
+  raceFactors:
+  - name: URAシナリオ
+    level: ☆2
+  - name: 天皇賞（秋）
+    level: ☆1
+  - name: 有馬記念
+    level: ☆1
+
+successor1:
+  statusId: スタミナ
+  statusLevel: ☆2
+  distanceId: 芝
+  distanceLevel: ☆2
+  uniqueFactor: ブリリアント・レッドエース
+  uniqueFactorLevel: ☆1
+  commonFactors: null
+  raceFactors:
+  - name: 日本ダービー
+    level: ☆1
+  - name: 有馬記念
+    level: ☆1
+
+successor2:
+  statusId: スタミナ
+  statusLevel: ☆3
+  distanceId: 中距離
+  distanceLevel: ☆2
+  uniqueFactor: 煌星のヴォードヴィル
+  uniqueFactorLevel: ☆1
+  commonFactors:
+  - name: ポジションセンス
+    level: ☆1
+  - name: マイルコーナー◯
+    level: ☆2
+  - name: 地固め
+    level: ☆1
+  raceFactors:
+  - name: URAシナリオ
+    level: ☆2
+  - name: 天皇賞（秋）
+    level: ☆2

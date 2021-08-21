@@ -1,0 +1,7 @@
+[scripts]
+post_profile = "python3 post.py"
+
+[packages]
+selenium = "*"
+chromedriver-binary = "==92.0.4515.107.0"
+pyyaml = "*"
