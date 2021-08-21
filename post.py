@@ -52,6 +52,7 @@ for ganre_name, ganre_items in config.items():
             for i in range(len(value)-1):
                 form = gds_shadow.find_element_by_css_selector(button_selector)
                 form.click()
+                time.sleep(2)
             form_factors = gds_shadow.find_elements_by_css_selector(factor_selector)
             form_levels = gds_shadow.find_elements_by_css_selector(level_selector)
 
