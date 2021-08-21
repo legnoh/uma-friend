@@ -21,8 +21,8 @@ jobs:
         pip install pipenv
         pipenv install
     - name: Start XVFB
-      run: Xvfb :99 &
+      run: Xvfb :1000 &
     - name: Run scraping
       run: pipenv run post_profile
       env:
-        DISPLAY: :99
+        DISPLAY: :1000
