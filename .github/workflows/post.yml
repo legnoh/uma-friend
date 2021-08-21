@@ -27,7 +27,7 @@ jobs:
         pipenv install
     - name: Start XVFB
       run: Xvfb :1000 &
-    - name: Run scraping
+    - name: Run post_profile
       run: | 
         pipenv run post_profile
         cat ./screenshot.base64 | base64 -d > profile.jpg
