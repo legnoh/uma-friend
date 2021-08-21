@@ -14,7 +14,7 @@ def set_value(form, tag, value):
         form.click()
     else:
         print("error")
-    time.sleep(1)
+    time.sleep(2)
 
 driver = webdriver.Chrome()
 
