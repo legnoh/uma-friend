@@ -6,6 +6,7 @@ root:
   successor1: "div.-r-uma-musume-friends-form__contents:nth-child(4) > div:nth-child(2) > "
   successor2: "div.-r-uma-musume-friends-form__contents:nth-child(4) > div:nth-child(3) > "
   postButton: "div.-r-uma-musume-friends-form__contents:nth-child(4) > button"
+  postCard: "ul.-r-uma-musume-friends__list > li:first-child"
 
 profile:
   supportId: "div > input"
