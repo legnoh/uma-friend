@@ -15,6 +15,11 @@ jobs:
     - uses: actions/setup-python@v2
       with:
         python-version: '3.x'
+    - name: Install Japanese Fonts
+      run: |
+        sudo apt install -y fonts-ipafont
+        fc-cache -fv
+        fc-list | grep -i ipa
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
