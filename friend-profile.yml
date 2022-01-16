@@ -25,9 +25,9 @@ delegate:
     level: ☆2
   - name: ラッキーセブン
     level: ☆1
-  raceFactors:
   - name: URAシナリオ
     level: ☆2
+  raceFactors:
   - name: 天皇賞（秋）
     level: ☆1
   - name: 有馬記念
@@ -61,8 +61,8 @@ successor2:
     level: ☆2
   - name: 地固め
     level: ☆1
-  raceFactors:
   - name: URAシナリオ
     level: ☆2
+  raceFactors:
   - name: 天皇賞（秋）
     level: ☆2
