@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "cabb6dc5a84fe030e4ca83f6b6d7176e10237e77cee77e4da0a18799503e54f3"
+            "sha256": "007bf852b15b234b52d37e63abdb6281207279d336cb4df19a711026745def2e"
         },
         "pipfile-spec": 6,
         "requires": {},
@@ -94,9 +94,10 @@
         },
         "chromedriver-binary": {
             "hashes": [
-                "sha256:7d6cb63802e17f41ac117d2486b99952e6c55465c179edac9cd75abdd4d3cdef"
+                "sha256:4e6bf6f37c6df40d764af58b4c98ff44672005cb7cc813d7135d1fe1f27fd737"
             ],
-            "version": "==101.0.4951.41.0"
+            "index": "pypi",
+            "version": "==102.0.5005.61.0"
         },
         "cryptography": {
             "hashes": [
@@ -207,12 +208,14 @@
                 "sha256:e61ceaab6f49fb8bdfaa0f92c4b57bcfbea54c09277b1b4f7ac376bfb7a7c174",
                 "sha256:f84fbc98b019fef2ee9a1cb3ce93e3187a6df0b2538a651bfb890254ba9f90b5"
             ],
+            "index": "pypi",
             "version": "==6.0"
         },
         "selenium": {
             "hashes": [
                 "sha256:ba5b2633f43cf6fe9d308fa4a6996e00a101ab9cb1aad6fd91ae1f3dbe57f56f"
             ],
+            "index": "pypi",
             "version": "==4.2.0"
         },
         "sniffio": {
