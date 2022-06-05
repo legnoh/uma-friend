@@ -70,7 +70,9 @@ button = gds_shadow.find_element(By.CSS_SELECTOR, selector['root']['postButton']
 button.click()
 
 print("post successful!")
-time.sleep(10)
+time.sleep(5)
+driver.execute_script("window.scrollTo(0, 300);")
+time.sleep(5)
 post_card = gds_shadow.find_element(By.CSS_SELECTOR, selector['root']['postCard'])
 screenshot = post_card.screenshot_as_base64
 
