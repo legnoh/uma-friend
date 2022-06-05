@@ -15,6 +15,7 @@ def set_value(form, tag, value):
         form.click()
     else:
         print("error")
+    time.sleep(0.3)
 
 driver = webdriver.Chrome()
 
@@ -51,7 +52,7 @@ for ganre_name, ganre_items in config.items():
             for i in range(len(value)-1):
                 form = gds_shadow.find_element(By.CSS_SELECTOR, button_selector)
                 form.click()
-                # time.sleep(2)
+                time.sleep(0.3)
             form_factors = gds_shadow.find_elements(By.CSS_SELECTOR, factor_selector)
             form_levels = gds_shadow.find_elements(By.CSS_SELECTOR, level_selector)
 
