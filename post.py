@@ -15,7 +15,6 @@ def set_value(form, tag, value):
         form.click()
     else:
         print("error")
-    time.sleep(1)
 
 driver = webdriver.Chrome()
 
@@ -33,8 +32,7 @@ driver.implicitly_wait(20);
 driver.execute_script("window.scrollTo(0, 1000);")
 
 print("open post modal....")
-# gds = driver.find_element_by_tag_name("gds-uma-musume-friends")
-gds_shadow = driver.find_element(By.TAG_NAME, "gds-uma-musume-friends").shadow_root
+gds_shadow = driver.find_element(By.TAG_NAME, "gds-umamusume-friends-list").shadow_root
 button = gds_shadow.find_element(By.CSS_SELECTOR, selector['root']['openModalButton'])
 button.click()
 
@@ -53,7 +51,7 @@ for ganre_name, ganre_items in config.items():
             for i in range(len(value)-1):
                 form = gds_shadow.find_element(By.CSS_SELECTOR, button_selector)
                 form.click()
-                time.sleep(2)
+                # time.sleep(2)
             form_factors = gds_shadow.find_elements(By.CSS_SELECTOR, factor_selector)
             form_levels = gds_shadow.find_elements(By.CSS_SELECTOR, level_selector)
 
