@@ -19,7 +19,7 @@ def set_value(form, tag, value):
     time.sleep(0.3)
 
 options = Options()
-options.add_argument('--headless')
+# options.add_argument('--headless')
 driver = webdriver.Chrome(options=options)
 
 with open('friend-profile.yml', 'r') as stream:
