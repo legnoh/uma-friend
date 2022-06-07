@@ -33,7 +33,7 @@ with open('css-selector.yml', 'r') as stream:
 print("access to post page....")
 driver.get('https://gamewith.jp/uma-musume/article/show/260740');
 driver.implicitly_wait(20);
-driver.execute_script("window.scrollTo(0, 300);")
+# driver.execute_script("window.scrollTo(0, 1000);")
 
 print("close ads....")
 driver.find_element(By.CSS_SELECTOR, selector['root']['adCloseButton']).click()
