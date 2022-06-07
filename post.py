@@ -16,7 +16,7 @@ def set_value(form, tag, value):
         form.click()
     else:
         print("error")
-    time.sleep(0.3)
+    # time.sleep(0.3)
 
 options = Options()
 # options.add_argument('--headless')
@@ -33,14 +33,15 @@ with open('css-selector.yml', 'r') as stream:
 print("access to post page....")
 driver.get('https://gamewith.jp/uma-musume/article/show/260740');
 driver.implicitly_wait(20);
-# driver.execute_script("window.scrollTo(0, 1000);")
 
 print("close ads....")
-driver.find_element(By.CSS_SELECTOR, selector['root']['adCloseButton']).click()
+button = driver.find_element(By.CSS_SELECTOR, selector['root']['adCloseButton'])
+button.click()
 
 print("open post modal....")
 gds_shadow = driver.find_element(By.TAG_NAME, "gds-umamusume-friends-list").shadow_root
 button = gds_shadow.find_element(By.CSS_SELECTOR, selector['root']['openModalButton'])
+driver.execute_script("window.scrollTo(0, "+ str(button.location['y']-button.size['height']) +");")
 button.click()
 
 print("input profile....")
@@ -71,15 +72,14 @@ for ganre_name, ganre_items in config.items():
             continue
 
 print("post profile....")
-driver.execute_script("window.scrollTo(0, 2000);")
 button = gds_shadow.find_element(By.CSS_SELECTOR, selector['root']['postButton'])
+driver.execute_script("window.scrollTo(0, "+ str(button.location['y']-button.size['height']) +");")
 button.click()
 
 print("post successful!")
 time.sleep(5)
-driver.execute_script("window.scrollTo(0, 300);")
-time.sleep(5)
 post_card = gds_shadow.find_element(By.CSS_SELECTOR, selector['root']['postCard'])
+driver.execute_script("window.scrollTo(0, "+ str(post_card.location['y']-post_card.size['height']) +");")
 screenshot = post_card.screenshot_as_base64
 
 print("write image to artifact...")
