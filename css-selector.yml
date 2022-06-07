@@ -1,5 +1,6 @@
 ---
 root:
+  adCloseButton: "div#gCloseButton"
   openModalButton: "div.-r-umamusume-friends-form > span > button.-r-umamusume-friends-button"
   profile: "div.-r-umamusume-friends-form__contents:nth-child(2) > "
   delegate: "div.-r-umamusume-friends-form__contents:nth-child(4) > div:nth-child(1) > "

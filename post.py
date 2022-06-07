@@ -2,6 +2,7 @@ import yaml
 import time
 import chromedriver_binary
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
 
@@ -17,7 +18,9 @@ def set_value(form, tag, value):
         print("error")
     time.sleep(0.3)
 
-driver = webdriver.Chrome()
+options = Options()
+options.add_argument('--headless')
+driver = webdriver.Chrome(options=options)
 
 with open('friend-profile.yml', 'r') as stream:
     config = yaml.load(stream, Loader=yaml.FullLoader)
@@ -30,7 +33,10 @@ with open('css-selector.yml', 'r') as stream:
 print("access to post page....")
 driver.get('https://gamewith.jp/uma-musume/article/show/260740');
 driver.implicitly_wait(20);
-driver.execute_script("window.scrollTo(0, 1000);")
+driver.execute_script("window.scrollTo(0, 300);")
+
+print("close ads....")
+driver.find_element(By.CSS_SELECTOR, selector['root']['adCloseButton']).click()
 
 print("open post modal....")
 gds_shadow = driver.find_element(By.TAG_NAME, "gds-umamusume-friends-list").shadow_root
