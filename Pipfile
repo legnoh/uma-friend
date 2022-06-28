@@ -3,5 +3,5 @@ post_profile = "python3 post.py"
 
 [packages]
 selenium = "*"
-chromedriver-binary = "==102.*"
+chromedriver-binary = "==103.*"
 pyyaml = "*"
